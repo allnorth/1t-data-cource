@@ -1,7 +1,7 @@
-FROM postgres:latest
+FROM python:slim
 
-ENV POSTGRES_PASSWORD=mypostgrespass
-ENV POSTGRES_USER=postgres
-ENV POSTGRES_DATABASE=postgres
+COPY ./python-app/src /usr/app
 
-COPY init.sql /docker-entrypoint-initdb.d/init.sql
+WORKDIR /usr/app
+
+RUN pip3 install -r requirements.txt
