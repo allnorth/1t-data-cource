@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   db:
     container_name: postgres
     image: postgres:latest
@@ -19,6 +20,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 10s
+
   app:
     container_name: app
     build:
