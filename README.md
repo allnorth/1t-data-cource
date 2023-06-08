@@ -19,7 +19,7 @@
 ```docker compose up --build -d```
 
 Подключение к базе данных:
-```docker exec -it postgres psql -U postgres```
+```docker exec -it postgres psql -U postgres -d testdb```
 
 Просмотр результатов расчета:
 ```docker logs app```
