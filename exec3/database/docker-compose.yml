@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  db:
+    container_name: postgres
+    image: postgres:latest
+    volumes:
+      - /tmp/pgdata:/var/lib/postgresql/data/pgdata
+      - ./ddl/:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=testdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d testdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
