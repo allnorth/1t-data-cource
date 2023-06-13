@@ -6,7 +6,7 @@ services:
     image: postgres:latest
     volumes:
       - /tmp/pgdata:/var/lib/postgresql/data/pgdata
-      - ./ddl/:/docker-entrypoint-initdb.d
+      - ./ddl/create_tables.sql:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
     environment:
