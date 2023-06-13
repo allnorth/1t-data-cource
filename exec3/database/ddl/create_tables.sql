@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS public.publisher
 CREATE TABLE IF NOT EXISTS public.books
 (     book_code     bigint NOT NULL primary key
     , title         varchar
-    , author        varchar
+    , authors       varchar[]
     , publish_year  int
     , vol           int
     , price         decimal
