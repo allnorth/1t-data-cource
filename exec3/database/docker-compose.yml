@@ -7,6 +7,7 @@ services:
     volumes:
       - /tmp/pgdata:/var/lib/postgresql/data/pgdata
       - ./ddl/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./ddl/test_data.sql:/docker-entrypoint-initdb.d/test_data.sql
     ports:
       - "5432:5432"
     environment:
@@ -15,7 +16,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d testdb"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
       interval: 10s
       timeout: 5s
       retries: 5
