@@ -11,7 +11,7 @@ docker compose restart
 docker compose down
 
 #подключение к базе данных
-docker exec -it postgres psql -U postgres -d testdb
+docker exec -it postgres psql -U postgres -d dm_db
 
 #логи с результатами выполнения python-скрипта
 docker logs app
