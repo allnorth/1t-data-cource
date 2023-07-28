@@ -1,0 +1,45 @@
+version: '3'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    networks:
+        - clickhouse
+    volumes:
+      - /tmp/pgdata:/var/lib/postgresql/data/pgdata
+      - ./pg-entrypoint/ddl.sql:/docker-entrypoint-initdb.d/ddl.sql
+      - ./pg-entrypoint/dml.sql:/docker-entrypoint-initdb.d/dml.sql
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=testdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+  clickhouse:
+    container_name: clickhouse
+    image: clickhouse/clickhouse-server:latest
+    networks:
+        - clickhouse
+    ulimits:
+        nofile:
+          soft: 262144
+          hard: 262144
+    ports:
+      - 8123:8123
+    volumes:
+      - /tmp/clickhouse-data:/var/lib/clickhouse
+      - ./ch-entrypoint/ddl.sql:/docker-entrypoint-initdb.d/ddl.sql
+    depends_on:
+      postgres:
+        condition: service_healthy
+volumes:
+  clickhouse-data:
+networks:
+    clickhouse:
