@@ -17,13 +17,15 @@ def get_curr():
     url = 'https://api.exchangerate.host/latest?base=BTC&symbols=RUB'
     response = requests.get(url)
     data = response.json()
+    lst = []
+    lst.append((data['date'], data['rates']['RUB']))
 
     conn = psycopg2.connect(dbname='test', user='postgres',
-                            password='password', host='db')
+                            password='password', host='db', port = '5430')
 
     with conn.cursor() as cursor:
         conn.autocommit = True
-        insert = sql.SQL('INSERT INTO exchange_rate (rate_dt, rate_amt) VALUES {}').format(sql.SQL(',').join(map(sql.Literal, data['date'], data['rates']['RUB'])))
+        insert = sql.SQL('INSERT INTO exchange_rate (rate_dt, rate_amt) VALUES {}').format(sql.SQL(',').join(map(sql.Literal, lst)))
         cursor.execute(insert)
 
 my_dag = DAG(
