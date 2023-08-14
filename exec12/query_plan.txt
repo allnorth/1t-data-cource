@@ -1,31 +1,24 @@
-Gather Motion 2:1  (slice1; segments: 2)  (cost=619.98..1053.34 rows=12 width=64) (actual time=6.192..6.194 rows=1 loops=1)
-  ->  GroupAggregate  (cost=619.98..1053.17 rows=6 width=64) (actual time=5.563..5.563 rows=1 loops=1)
+Gather Motion 2:1  (slice1; segments: 2)  (cost=258.96..662.32 rows=6 width=64) (actual time=7.944..7.946 rows=0 loops=1)
+  ->  GroupAggregate  (cost=258.96..662.23 rows=3 width=64) (actual time=0.000..0.006 rows=0 loops=1)
         Group Key: p.product_name
-        ->  Redistribute Motion 2:2  (slice2; segments: 2)  (cost=619.98..1053.07 rows=6 width=40) (actual time=5.551..5.552 rows=4 loops=1)
+        ->  Redistribute Motion 2:2  (slice2; segments: 2)  (cost=258.96..662.18 rows=3 width=40) (actual time=0.000..0.005 rows=0 loops=1)
               Hash Key: p.product_name
-              ->  Hash Join  (cost=619.98..1052.95 rows=6 width=40) (actual time=3.528..4.265 rows=4 loops=1)
-                    Hash Cond: (sf.date_id = d.date_id)
-"                    Extra Text: (seg0)   Hash chain length 1.0 avg, 1 max, using 1 of 262144 buckets."
-                    ->  Hash Join  (cost=259.67..692.51 rows=30 width=48) (actual time=1.313..1.567 rows=6 loops=1)
-                          Hash Cond: (sf.product_id = p.product_id)
-"                          Extra Text: (seg0)   Hash chain length 1.0 avg, 1 max, using 1 of 131072 buckets."
-                          ->  Seq Scan on sale_facts sf  (cost=0.00..353.00 rows=30300 width=24) (actual time=0.045..0.047 rows=10 loops=1)
-                          ->  Hash  (cost=259.25..259.25 rows=33 width=36) (actual time=0.014..0.015 rows=1 loops=1)
-                                Buckets: 131072  Batches: 1  Memory Usage: 1025kB
-                                ->  Broadcast Motion 2:2  (slice3; segments: 2)  (cost=0.00..259.25 rows=33 width=36) (actual time=0.005..0.006 rows=1 loops=1)
-                                      ->  Seq Scan on products p  (cost=0.00..258.75 rows=17 width=36) (actual time=0.087..0.089 rows=1 loops=1)
-                                            Filter: ((product_name)::text = 'pr2'::text)
-                                            Rows Removed by Filter: 3
-                    ->  Hash  (cost=360.00..360.00 rows=25 width=4) (actual time=0.097..0.097 rows=1 loops=1)
-                          Buckets: 262144  Batches: 1  Memory Usage: 2049kB
-                          ->  Seq Scan on dates d  (cost=0.00..360.00 rows=25 width=4) (actual time=0.081..0.082 rows=1 loops=1)
+              ->  Hash Join  (cost=258.96..662.13 rows=3 width=40) (actual time=0.000..4.633 rows=0 loops=1)
+                    Hash Cond: (sf.product_id = p.product_id)
+                    ->  Redistribute Motion 2:2  (slice3; segments: 2)  (cost=0.00..403.06 rows=28 width=16) (actual time=0.000..0.004 rows=0 loops=1)
+                          Hash Key: sf.product_id
+                          ->  Seq Scan on sale_facts_1_prt_2 sf  (cost=0.00..402.50 rows=28 width=16) (actual time=0.000..0.132 rows=0 loops=1)
                                 Filter: (date = '2023-02-01 00:00:00'::timestamp without time zone)
-                                Rows Removed by Filter: 1
+                    ->  Hash  (cost=258.75..258.75 rows=17 width=36) (actual time=0.148..0.149 rows=1 loops=1)
+                          Buckets: 262144  Batches: 1  Memory Usage: 2049kB
+                          ->  Seq Scan on products p  (cost=0.00..258.75 rows=17 width=36) (actual time=0.129..0.131 rows=1 loops=1)
+                                Filter: ((product_name)::text = 'pr2'::text)
+                                Rows Removed by Filter: 3
 Optimizer: Postgres query optimizer
-Planning Time: 1.443 ms
-  (slice0)    Executor memory: 61K bytes.
-"  (slice1)    Executor memory: 17K bytes avg x 2 workers, 17K bytes max (seg1)."
-"  (slice2)    Executor memory: 2629K bytes avg x 2 workers, 3176K bytes max (seg0).  Work_mem: 2049K bytes max."
-"  (slice3)    Executor memory: 39K bytes avg x 2 workers, 39K bytes max (seg0)."
+Planning Time: 1.638 ms
+  (slice0)    Executor memory: 49K bytes.
+"  (slice1)    Executor memory: 45K bytes avg x 2 workers, 45K bytes max (seg0)."
+"  (slice2)    Executor memory: 2089K bytes avg x 2 workers, 2105K bytes max (seg0).  Work_mem: 2049K bytes max."
+"  (slice3)    Executor memory: 40K bytes avg x 2 workers, 40K bytes max (seg0)."
 Memory used:  128000kB
-Execution Time: 11.413 ms
+Execution Time: 36.410 ms
