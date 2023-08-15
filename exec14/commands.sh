@@ -12,6 +12,6 @@ hadoop fs -put /people.csv /user/user/hive_files/people.csv
 hadoop fs -put /organization.csv /user/user/hive_files/organization.csv
 
 #Предоставляем права на чтение
-hadoop fs -chmod 755 /user/user/hive_files/customers.pdf
-hadoop fs -chmod 755 /user/user/hive_files/people.pdf
-hadoop fs -chmod 755 /user/user/hive_files/organization.pdf
+hadoop fs -chmod 755 /user/user/hive_files/customers.csv
+hadoop fs -chmod 755 /user/user/hive_files/people.csv
+hadoop fs -chmod 755 /user/user/hive_files/organization.csv
