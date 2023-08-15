@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS customers
     email             string,
     subscription_date date
 )
-PARTITIONED BY (group_id int, year int)
+PARTITIONED BY (year int, group_id int)
 CLUSTERED BY (id) INTO 10 BUCKETS
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
 
