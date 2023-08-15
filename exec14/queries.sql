@@ -113,3 +113,4 @@ join    (   select company, subscription_year, max(cnt)
             from tbl
             group by company, subscription_year
         ) as tt on tt.company = t.company and tt.subscription_year = t.subscription_year
+order by t.company, t.subscription_year;
