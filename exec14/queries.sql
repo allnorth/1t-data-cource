@@ -1,4 +1,6 @@
+set hive.exec.dynamic.partition = true;
 set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.enforce.bucketing = true;
 
 drop table if exists temp_people;
 drop table if exists temp_organizations;
@@ -84,7 +86,7 @@ INSERT INTO organizations partition (group_id) select * from temp_organizations;
 
 with tbl as (select company, subscription_year, age_group, count(age_group) as cnt
              from   (   select  c.company,
-                                year(c.subscription_date) as subscription_year,
+                                c.year as subscription_year,
                                 case
                                     when year(`current_date`()) - year(p.date_of_birth) between 0 and 18
                                     then '0-18'
