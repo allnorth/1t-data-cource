@@ -1,0 +1,119 @@
+2023.08.20 15:13:32 INFO  Started: Metals version 1.0.0 in folders '/Users/al_north/1t-data-git-intro' for client Visual Studio Code 1.81.1.
+авг. 20, 2023 3:13:32 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.20.1 by Redgate
+авг. 20, 2023 3:13:32 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+авг. 20, 2023 3:13:32 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/al_north/1t-data-git-intro/.metals/metals (H2 2.1)
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.008s)
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+авг. 20, 2023 3:13:33 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.010s)
+2023.08.20 15:13:33 INFO  time: initialize in 0.36s
+2023.08.20 15:13:34 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/project/build.sbt
+авг. 20, 2023 3:13:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+авг. 20, 2023 3:13:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+авг. 20, 2023 3:13:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5
+2023.08.20 15:13:34 WARN  Build server is not auto-connectable.
+2023.08.20 15:13:34 WARN  no build tool detected in workspace '/Users/al_north/1t-data-git-intro'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.08.20 15:13:34 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/project/build.sbt
+2023.08.20 15:13:37 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/project/build.sbt
+2023.08.20 15:13:58 INFO  no build target found for /Users/al_north/1t-data-git-intro/exec15/project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.0
+2023.08.20 15:13:59 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/project/hello.scala
+2023.08.20 15:13:59 INFO  time: code lens generation in 25s
+2023.08.20 15:13:59 INFO  time: code lens generation in 22s
+2023.08.20 15:13:59 INFO  time: code lens generation in 9.55s
+2023.08.20 15:14:04 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/project/hello.scala
+2023.08.20 15:14:24 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/hello.scala
+2023.08.20 15:14:34 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/build.sbt
+2023.08.20 15:16:43 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/build.sbt
+2023.08.20 15:17:13 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/src/main/scala/hello.scala
+авг. 20, 2023 3:31:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.08.20 15:31:58 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/build.sbt
+2023.08.20 15:32:11 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/test/scala/MySuite.scala
+2023.08.20 15:32:18 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 15:32:58 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 15:37:10 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/build.sbt
+2023.08.20 15:40:32 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/build.sbt
+2023.08.20 16:25:36 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 16:25:52 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 16:26:32 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 16:27:25 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 16:27:52 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 16:28:09 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 16:29:15 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 16:31:13 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/emp_income.scala
+2023.08.20 16:32:10 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/EmpIncome.scala
+авг. 20, 2023 4:34:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 741
+авг. 20, 2023 4:59:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2033
+авг. 20, 2023 5:00:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2167
+авг. 20, 2023 5:05:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2239
+авг. 20, 2023 5:07:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2388
+2023.08.20 17:12:36 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:13:44 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:13:51 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/EmpIncome.scala
+2023.08.20 17:14:42 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/EmpIncome.scala
+авг. 20, 2023 5:17:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3395
+2023.08.20 17:17:34 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/EmpIncome.scala
+2023.08.20 17:18:13 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:20:02 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:20:02 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:20:02 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+авг. 20, 2023 5:20:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3775
+2023.08.20 17:21:06 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:26:32 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:28:05 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:30:58 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:32:54 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:33:44 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+авг. 20, 2023 5:34:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4810
+2023.08.20 17:34:42 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:35:02 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.20 17:35:23 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:24:42 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:24:56 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:25:01 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:25:07 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:27:23 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:27:25 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:27:44 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:29:20 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:29:41 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:31:53 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:32:08 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:32:34 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:32:44 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 13:33:43 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 14:23:17 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 15:27:16 WARN  no build target for: /Users/al_north/1t-data-git-intro/exec15/helloworld/src/main/scala/Main.scala
+2023.08.21 15:27:16 INFO  Shutting down server
+2023.08.21 15:27:16 INFO  shutting down Metals
+2023.08.21 15:27:16 INFO  Exiting server
